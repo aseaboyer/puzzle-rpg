@@ -1,0 +1,134 @@
+html, body {
+    background-color:#333;
+    font-family:'Josefin Sans', sans-serif;
+    height:100%;
+    margin:0;
+    min-height:100%;
+    padding:0;
+    position:relative;
+    width:100%;
+}
+h1 {
+    color:rgba(24,221,0,1);
+    color:rgba(47,181,243,1);
+    left:50%;
+    margin-left:-250px;
+    margin-bottom:155px;
+    position:absolute;
+    text-align:center;
+    top:-100px;
+    transition:top 300ms;
+    width:500px;
+    z-index:40;
+}
+body[data-gamestate] h1 {
+    top:0;
+}
+body[data-gamestate="start"] h1 {
+    top:50%;
+}
+body[data-gamestate] #pressKeyToStart {
+    bottom:-50px;
+    color:rgba(24,221,0,1);
+    height:50px;
+    position:absolute;
+    text-align:center;
+    transition:bottom 300ms;
+    width:100%;
+}
+body[data-gamestate="start"] #pressKeyToStart {
+    bottom:50px;
+}
+
+#gameWrapper {
+    background-color:#000;
+    height:400px;
+    left:50%;
+    margin-left:-150px;
+    margin-top:-200px;
+    overflow:hidden;
+    position:absolute;
+    top:50%;
+    width:300px;
+}
+
+#gameWrapper #UI {
+    height:100%;
+    position:absolute;
+    top:0;
+    width:100%;
+}
+
+#gameWrapper #map {
+    height:100%;
+    position:absolute;
+    top:-400px;
+    transition:top 400ms;
+    width:100%;
+}
+body[data-gamestate="map"] #gameWrapper #map {
+    top:0;
+}
+
+#gameWrapper canvas#game {
+    height:100%;
+    position:absolute;
+    top:0;
+    width:100%;
+}
+
+#gameWrapper #inventory {
+    height:100%;
+    position:absolute;
+    top:0;
+    width:100%;
+}
+
+#score {
+    color:rgba(24,221,0,1);
+    height:50px;
+    left:50%;
+    margin:-150px;
+    margin-top:155px;
+    position:absolute;
+    text-align:right;
+    top:50%;
+    width:300px;
+    
+    display:none;
+}
+#healthWrapper {
+    background-color:#666;
+    height:4px;
+    left:50%;
+    margin:-150px;
+    margin-top:165px;
+    position:absolute;
+    text-align:right;
+    top:50%;
+    width:150px;
+    
+    display:none;
+}
+#healthBar {
+    background-color:rgba(24,221,0,1);
+    height:100%;
+    transition:width 300ms;
+    width:0%;
+}
+
+footer {
+    bottom:0;
+    margin:0;
+    padding:0;
+    position:absolute;
+    right:0;
+}
+footer p {
+    margin:5px;
+    padding:5px;
+}
+footer p a {
+    color:aquamarine;
+    color:rgba(47,181,243,1);
+}

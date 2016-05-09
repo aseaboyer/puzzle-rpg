@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>puzzle rpg</title>
+    <meta name="description" content="An asteroids-type game for the browser.">
+    <meta name="author" content="Andy Seaboyer">
+
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <h1>puzzle rpg</h1>
+    <section id="gameWrapper">
+        <div id="UI">
+            <div id="pressKeyToStart">Click, press, or press a key to start playing!</div>
+            <div id="healthWrapper">
+                <div id="healthBar"></div>
+            </div>
+            <div id="score">
+                <span id="scoreCount">0</span>
+                <strong>score</strong>
+            </div>
+        </div>
+        <div id="map">map</div>
+        <canvas id="game" height="300px" width="400px"></canvas>
+        <div id="inventory">inventory</div>
+    </section>
+    
+    <footer>
+        <p><a target="_blank" href="http://www.colourlovers.com/palette/2652343/*Neon-Palette*">Colors Credit</a></p>
+    </footer>
+    <script src="js/Game.js"></script>
+    <script src="js/Player.js"></script>
+    
+    <script src="js/run.js"></script>
+</body>
+</html>

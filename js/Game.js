@@ -8,7 +8,7 @@ function Game (canvas, bitSize) {
     obj.state = "start";
     obj.setState = function (stateName) {
         this.state = stateName;
-        document.body.dataset.gamestate = stateName;
+        document.body.dataset.activeScene = stateName;
     };
     
     /*

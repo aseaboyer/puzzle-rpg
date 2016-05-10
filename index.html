@@ -20,7 +20,6 @@
     <h1>puzzle rpg</h1>
     <section id="gameWrapper">
         <div id="UI">
-            <div id="pressKeyToStart">Click, press, or press a key to start playing!</div>
             <div id="healthWrapper">
                 <div id="healthBar"></div>
             </div>
@@ -29,9 +28,19 @@
                 <strong>score</strong>
             </div>
         </div>
-        <div id="map">map</div>
-        <canvas id="game" height="300px" width="400px"></canvas>
-        <div id="inventory">inventory</div>
+        <div id="scenes">
+            <div id="gameStart" class="scene">
+                <div id="pressKeyToStart">Click or touch to start</div>
+            </div>
+            <div id="map" class="scene">map</div>
+            <div id="charSelect" class="scene">
+                select a char</div>
+            <div id="game" class="scene">
+                <canvas id="gameCanvas" height="300px" width="400px"></canvas>
+                <div id="inventory" class="scene">
+                    inventory</div>
+            </div>
+        </div>
     </section>
     
     <footer>

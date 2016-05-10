@@ -21,23 +21,11 @@ h1 {
     width:500px;
     z-index:40;
 }
-body[data-gamestate] h1 {
+body[data-active-scene] h1 {
     top:0;
 }
-body[data-gamestate="start"] h1 {
+body[data-active-scene="start"] h1 {
     top:50%;
-}
-body[data-gamestate] #pressKeyToStart {
-    bottom:-50px;
-    color:rgba(24,221,0,1);
-    height:50px;
-    position:absolute;
-    text-align:center;
-    transition:bottom 300ms;
-    width:100%;
-}
-body[data-gamestate="start"] #pressKeyToStart {
-    bottom:50px;
 }
 
 #gameWrapper {
@@ -59,29 +47,37 @@ body[data-gamestate="start"] #pressKeyToStart {
     width:100%;
 }
 
-#gameWrapper #map {
+#gameWrapper .scene {
     height:100%;
     position:absolute;
     top:-400px;
     transition:top 400ms;
     width:100%;
 }
-body[data-gamestate="map"] #gameWrapper #map {
+/*
+ * Start Scene
+ */
+body[data-active-scene="start"] #gameStart {
     top:0;
 }
-
-#gameWrapper canvas#game {
-    height:100%;
+#gameStart #pressKeyToStart {
+    bottom:50px;
+    color:rgba(24,221,0,1);
+    height:50px;
     position:absolute;
-    top:0;
+    text-align:center;
     width:100%;
 }
-
-#gameWrapper #inventory {
-    height:100%;
-    position:absolute;
+#gameStart #pressKeyToStart:hover,
+#gameStart #pressKeyToStart:active {
+    cursor:pointer;
+    text-decoration:underline;
+}
+/*
+ * Map Scene
+ */
+body[data-active-scene="map"] #gameWrapper #map {
     top:0;
-    width:100%;
 }
 
 #score {

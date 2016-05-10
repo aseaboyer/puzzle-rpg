@@ -5,10 +5,17 @@ var game, keys,
     player;
 
 /*
+ * Declare button interactions
+ */
+document.getElementById ("pressKeyToStart").addEventListener ("click", function (e) {
+    game.setState ("map");
+});
+
+/*
  * INIT Phase
  */
 (function () { // INIT
-    var c = document.getElementById ("game"),
+    var c = document.getElementById ("gameCanvas"),
         bitSize = 5;
     
     game = new Game (c, bitSize);

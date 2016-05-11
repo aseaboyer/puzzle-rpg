@@ -7,7 +7,11 @@ var game, keys,
 /*
  * Declare button interactions
  */
+document.getElementById ("optionsToggle").addEventListener ("click", function (e) {
+    game.toggleOptionsMenu ();
+});
 document.getElementById ("pressKeyToStart").addEventListener ("click", function (e) {
+    game.updateMap ();
     game.setState ("map");
 });
 

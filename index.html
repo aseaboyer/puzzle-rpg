@@ -9,6 +9,7 @@
     <meta name="author" content="Andy Seaboyer">
 
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="fonts/font-awesome-4.6.2/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <!--[if lt IE 9]>
@@ -42,12 +43,35 @@
             </div>
         </div>
     </section>
+    <section id="options">
+        <ul id="menu">
+            <li><h2>options menu</h2></li>
+            <li>
+                <input type="checkbox" id="colorBlindModeToggle" value="true">
+                <label for="colorBlindModeToggle">Colorblind Mode</label>
+            </li>
+            <li>
+                <input type="checkbox" id="soundToggle" value="true">
+                <label for="soundToggle">Sound On</label>
+            </li>
+            <li>
+                <input type="checkbox" id="sfxToggle" value="true">
+                <label for="sfxToggle">SFX On</label>
+            </li>
+        </ul>
+        <button id="optionsToggle">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            options</button>
+    </section>
     
     <footer>
         <p><a target="_blank" href="http://www.colourlovers.com/palette/2652343/*Neon-Palette*">Colors Credit</a></p>
     </footer>
     <script src="js/Game.js"></script>
     <script src="js/Player.js"></script>
+    
+    <script src="data/saveData.js"></script>
+    <script src="data/levelData.js"></script>
     
     <script src="js/run.js"></script>
 </body>

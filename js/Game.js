@@ -15,8 +15,25 @@ function Game (canvas, bitSize) {
         document.body.dataset.activeScene = stateName;
     };
     obj.updateMap = function () {
-        var mapContainer = document.getElementById ("map");
-        console.log (mapContainer)
+        var mapContainer = document.getElementById ("map"),
+            tiles = {};
+        var maxWidth = mapContainer.offsetWidth,
+            maxHeight = mapContainer.offsetHeight;
+        tiles.width = (maxWidth / levelData.width);
+        tiles.height = (maxHeight / levelData.height);
+        mapContainer.innerHTML = "";
+        
+        for (var i = 0; i < levelData.levels.length; i++) {
+        console.log (levelData.levels [i]);
+            var mapTile = document.createElement ("div");
+                mapTile.classList.add ("mapTile");
+                mapTile.dataset.levelName = levelData.levels [i].name;
+                mapTile.style.left = (levelData.levels [i].pos.x * tiles.width) + "px";
+                mapTile.style.bottom = (levelData.levels [i].pos.y * tiles.height) + "px";
+                mapTile.style.width = (tiles.width) + "px";
+                mapTile.style.height = (tiles.height) + "px";
+            mapContainer.appendChild (mapTile);
+        }
     };
     
     /*

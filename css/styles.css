@@ -79,6 +79,10 @@ body[data-active-scene="start"] #gameStart {
 body[data-active-scene="map"] #gameWrapper #map {
     top:0;
 }
+#map .mapTile {
+    background-color:aquamarine;
+    position:absolute;
+}
 
 #score {
     color:rgba(24,221,0,1);
@@ -117,11 +121,12 @@ body[data-active-scene="map"] #gameWrapper #map {
     background-color:transparent;
     border-width:0;
     color:rgba(47,181,243,1);
+    cursor:pointer;
     font-size:12pt;
     text-decoration:underline;
 }
 #optionsToggle:hover,
-#optionsToggle:active, {
+#optionsToggle:active {
     text-decoration:none;
 }
 section#options {

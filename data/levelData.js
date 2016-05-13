@@ -1,6 +1,8 @@
 var levelData = {
-    "width": 3,
-    "height": 3,
+    "grid": {
+        "width": 3,
+        "height": 3
+    },
     "levels": [
         {
             "name": "A start",

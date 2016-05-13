@@ -80,9 +80,32 @@ body[data-active-scene="map"] #gameWrapper #map {
     top:0;
 }
 #map .mapTile {
-    background-color:aquamarine;
     position:absolute;
 }
+#map .mapTile .inner {
+    background-color:aquamarine;
+    height:60px;
+    left:49%;
+    margin:-30px;
+    padding:2%;
+    position:absolute;
+    top:49%;
+    width:60px;
+}
+#map .mapTile.available .inner {
+    cursor:pointer;
+}
+#map .mapTile.available .inner:hover {
+    background-color:tomato;
+}
+
+/*
+ * Map Scene
+ */
+body[data-active-scene="charSelect"] #gameWrapper #charSelect {
+    top:0;
+}
+
 
 #score {
     color:rgba(24,221,0,1);

@@ -24,6 +24,7 @@ document.getElementById ("pressKeyToStart").addEventListener ("click", function 
     
     game = new Game (c, bitSize);
     player = new Player ();
+    player.initPlayer ();
     
     window.setTimeout (function (){
         game.setState ("start");

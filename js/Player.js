@@ -4,7 +4,7 @@ function Player () {
     obj.highestCompletedLevel = 0;
     obj.characters = [];
     
-    obj.loadPlayer = function () {
+    obj.initPlayer = function () {
         // Check localstorage, load default if it doesn't exist
         var playerData = localStorage.getItem ("savedPlayer");
         if (playerData != null) {

@@ -24,7 +24,7 @@ function Game (canvas, bitSize) {
         mapContainer.innerHTML = "";
         
         for (var i = 0; i < levelData.levels.length; i++) {
-        console.log (levelData.levels [i]);
+            //console.log (levelData.levels [i]);
             var mapTile = document.createElement ("div");
                 mapTile.classList.add ("mapTile");
                 mapTile.dataset.levelName = levelData.levels [i].name;

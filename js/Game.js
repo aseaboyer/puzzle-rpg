@@ -87,7 +87,7 @@ function Game (canvas, bitSize) {
         charContainer.appendChild (charList);
     };
     obj.selectChar = function (e) {
-        this.currentLevel = e.dataset.id;
+        this.currentChar = e.dataset.id;
         console.log ("Selected to play: " + e.dataset.name);
     };
     

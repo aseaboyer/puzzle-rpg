@@ -53,14 +53,42 @@ function Game (canvas, bitSize) {
         console.log (tile);
         this.currentLevel = tile.dataset.id;
         
-        game.updateMap ();
+        game.updateCharList ();
         game.setState ("charSelect");
     };
     obj.updateCharList = function () {
+        console.log (player.characters);
+        var charContainer = document.getElementById ("charSelect"),
+            charList = document.createElement ("ul");
         
+        charContainer.innerHTML = "";
+        charList.classList.add ("charList");
+        
+        for (var i = 0; i < player.characters.length; i++) {
+            var charItem = document.createElement ("li");
+                charItem.classList.add ("char");
+                charItem.classList.add (player.characters [i].name.toLowerCase ());
+                charItem.innerHTML = "<span class='icon'>" + 
+                    player.characters [i].level + "</span>" + 
+                    "<div class='text'><span class='name'>" + 
+                    player.characters [i].name + "</span><br>" + 
+                    "<span class='stat'>Level " + 
+                    player.characters [i].level + " " + 
+                    player.characters [i].class + "</span></text>";
+                charItem.dataset.id = i;
+                charItem.dataset.name = player.characters [i].name;
+            
+            charItem.addEventListener ("click", function (e) {
+                game.selectChar (this);
+            });
+            charList.appendChild (charItem);
+        }
+        
+        charContainer.appendChild (charList);
     };
     obj.selectChar = function (e) {
-        
+        this.currentLevel = e.dataset.id;
+        console.log ("Selected to play: " + e.dataset.name);
     };
     
     /*

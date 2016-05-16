@@ -100,10 +100,39 @@ body[data-active-scene="map"] #gameWrapper #map {
 }
 
 /*
- * Map Scene
+ * Char Select Scene
  */
 body[data-active-scene="charSelect"] #gameWrapper #charSelect {
+    overflow-y:visible;
     top:0;
+}
+#charSelect ul.charList {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+#charSelect .char {
+    color:white;
+    cursor:pointer;
+    display:flex;
+}
+#charSelect .char:hover {
+    background-color:rgba(255,255,255,0.1);
+    transition:all 300ms;
+}
+#charSelect .icon {
+    border:2px solid #666;
+    display:inline-block;
+    width:76px;
+    height:76px;
+}
+#charSelect .char .icon {
+    border:2px solid #090;
+}
+#charSelect .name {
+    font-size:1.2em;
+    font-size:1.2rem;
+    font-weight:bold;
 }
 
 

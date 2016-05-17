@@ -9,6 +9,8 @@ function Game (canvas, bitSize) {
         document.body.classList.toggle ("optionsOpen");
     };
     
+    obj.currentGame = {};
+    
     obj.state = "start";
     obj.setState = function (stateName) {
         this.state = stateName;
@@ -51,10 +53,10 @@ function Game (canvas, bitSize) {
     };
     obj.selectLevel = function (tile) {
         console.log (tile);
-        this.currentLevel = tile.dataset.id;
+        this.currentGame.level = tile.dataset.id;
         
-        game.updateCharList ();
-        game.setState ("charSelect");
+        this.updateCharList ();
+        this.setState ("charSelect");
     };
     obj.updateCharList = function () {
         console.log (player.characters);
@@ -87,8 +89,17 @@ function Game (canvas, bitSize) {
         charContainer.appendChild (charList);
     };
     obj.selectChar = function (e) {
-        this.currentChar = e.dataset.id;
-        console.log ("Selected to play: " + e.dataset.name);
+        this.currentGame.char = characterData [e.dataset.id];
+        this.startGame ();
+    };
+    obj.startGame = function () {
+        console.log (game.currentGame);
+        
+        // make sure data checks out
+        // init the level
+        
+        // start gameplay
+        this.setState ("game");
     };
     
     /*

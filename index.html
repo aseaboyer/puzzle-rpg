@@ -37,26 +37,35 @@
             <div id="charSelect" class="scene">
                 select a char</div>
             <div id="game" class="scene">
+                <div id="board"></div>
+                <div id="timeline"></div>
+                <!--
                 <canvas id="gameCanvas" height="300px" width="400px"></canvas>
                 <div id="inventory" class="scene">
                     inventory</div>
+                -->
             </div>
         </div>
     </section>
+    <section id="closedCaptions" role="region" aria-atomic="true" aria-live="assertive">CC</section>
     <section id="options">
         <ul id="menu">
             <li><h2>options menu</h2></li>
             <li>
-                <input type="checkbox" id="colorBlindModeToggle" value="true">
+                <input type="checkbox" id="colorBlindModeToggle">
                 <label for="colorBlindModeToggle">Colorblind Mode</label>
             </li>
             <li>
-                <input type="checkbox" id="soundToggle" value="true">
-                <label for="soundToggle">Sound On</label>
+                <input type="checkbox" id="soundToggle">
+                <label for="soundToggle">Sound</label>
             </li>
             <li>
-                <input type="checkbox" id="sfxToggle" value="true">
-                <label for="sfxToggle">SFX On</label>
+                <input type="checkbox" id="sfxToggle">
+                <label for="sfxToggle">SFX</label>
+            </li>
+            <li>
+                <input type="checkbox" id="captionsToggle">
+                <label for="captionsToggle">Closed Captioning</label>
             </li>
         </ul>
         <button id="optionsToggle">

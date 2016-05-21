@@ -135,6 +135,72 @@ body[data-active-scene="charSelect"] #gameWrapper #charSelect {
     font-weight:bold;
 }
 
+/*
+ * Gameplay Scene
+ */
+body[data-active-scene="game"] #gameWrapper #game {
+    top:0;
+}
+#game #board {
+    background-color:gray;
+    height:300px;
+    width:100%;
+}
+#game #timeline {
+    background-color:slategray;
+    display:flex;
+    flex-direction:row;
+    height:100px;
+    justify-content:space-around;
+    width:100%;
+}
+#timeline .charNode {
+    border:2px solid #666;
+    border-radius:50%;
+    height:42px;
+    width:42px;
+}
+#timeline .timeNode {
+}
+#timeline .playerTimeNode {
+    background-color:aquamarine;
+    border:2px solid #666;
+    border-radius:50%;
+    height:21px;
+    width:21px;
+}
+#timeline .enemyTimeNode {
+    background-color:tomato;
+    border:2px solid #666;
+    border-radius:50%;
+    height:21px;
+    width:21px;
+}
+
+/*
+ * Closed Captioning Window
+ */
+#closedCaptions {
+    background-color:darkslategrey;
+    border-radius:10px;
+    color:white;
+    left:50%;
+    margin-left:-250px;
+    margin-bottom:155px;
+    max-width:100%;
+    min-height:50px;
+    opacity:0;
+    padding:5px;
+    position:absolute;
+    text-align:center;
+    top:520px;
+    transition:opacity 300ms;
+    width:490px;
+    z-index:10;
+}
+body[data-captions-on="true"] #closedCaptions {
+    opacity:1;
+}
 
 #score {
     color:rgba(24,221,0,1);
@@ -185,8 +251,10 @@ section#options {
     position: absolute;
     bottom: 15px;
     left: 15px;
+    z-index:42;
 }
 section#options ul#menu {
+    background-color:#333;
     border:1px solid rgba(24,221,0,1);
     height:0;
     margin:0;
@@ -196,7 +264,7 @@ section#options ul#menu {
     transition:all 300ms;
 }
 body.optionsOpen section#options ul#menu {
-    height:110px;
+    height:130px;
     opacity:1;
 }
 section#options ul#menu h2 {

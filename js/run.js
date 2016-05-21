@@ -15,6 +15,20 @@ document.getElementById ("pressKeyToStart").addEventListener ("click", function 
     game.setState ("map");
 });
 
+document.getElementById ("colorBlindModeToggle").addEventListener ("click", function (e) {
+    game.setOption ("colorBlindSetting", this.checked);
+});
+document.getElementById ("sfxToggle").addEventListener ("click", function (e) {
+    game.setOption ("sfxSetting", this.checked);
+});
+document.getElementById ("soundToggle").addEventListener ("click", function (e) {
+    game.setOption ("soundSetting", this.checked);
+});
+document.getElementById ("captionsToggle").addEventListener ("click", function (e) {
+    game.setOption ("captionsSetting", this.checked);
+});
+
+
 /*
  * INIT Phase
  */
@@ -23,6 +37,7 @@ document.getElementById ("pressKeyToStart").addEventListener ("click", function 
         bitSize = 5;
     
     game = new Game (c, bitSize);
+    game.initOptions ();
     player = new Player ();
     player.initPlayer ();
     

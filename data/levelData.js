@@ -12,6 +12,10 @@ var levelData = {
                 "x": 0,
                 "y": 0
             },
+            "grid": {
+                "x": 4,
+                "y": 4
+            },
             "nextLevel": 1
         },
         {
@@ -21,6 +25,10 @@ var levelData = {
             "pos": {
                 "x": 1,
                 "y": 0
+            },
+            "grid": {
+                "x": 4,
+                "y": 4
             },
             "nextLevel": 2
         },
@@ -32,6 +40,10 @@ var levelData = {
                 "x": 2,
                 "y": 0
             },
+            "grid": {
+                "x": 4,
+                "y": 4
+            },
             "nextLevel": 3
         },
         {
@@ -41,6 +53,10 @@ var levelData = {
             "pos": {
                 "x": 2,
                 "y": 1
+            },
+            "grid": {
+                "x": 4,
+                "y": 4
             },
             "nextLevel": 4
         },
@@ -52,6 +68,10 @@ var levelData = {
                 "x": 1,
                 "y": 1
             },
+            "grid": {
+                "x": 4,
+                "y": 4
+            },
             "nextLevel": 5
         },
         {
@@ -61,6 +81,10 @@ var levelData = {
             "pos": {
                 "x": 0,
                 "y": 1
+            },
+            "grid": {
+                "x": 4,
+                "y": 4
             },
             "nextLevel": 6
         }

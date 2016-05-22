@@ -90,7 +90,7 @@ function Game (canvas, bitSize) {
     };
     obj.selectLevel = function (tile) {
         console.log (tile);
-        this.currentGame.level = tile.dataset.id;
+        this.currentGame.level = levelData.levels [tile.dataset.id];
         
         this.updateCharList ();
         this.setState ("charSelect");
@@ -141,20 +141,32 @@ function Game (canvas, bitSize) {
     };
     
     obj.startLevel = function () {
-        var boardWrapper = document.getElementById ("board"),
-            timelineWrapper = document.getElementById ("timeline"),
-            playerIcon = document.createElement ("div"),
-            enemyIcon = document.createElement ("div");
+        this.createTimeline (document.getElementById ("timeline"));
+        this.createBoard (document.getElementById ("board"));
+    };
+    obj.createBoard = function (boardWrapper) {
+        var grid = this.currentGame.level.grid;
         
         boardWrapper.innerHTML = "";
+        
+        console.log (grid);
+        for (var x = 0; x < grid.x; x++) {// Add the nodes
+            for (var y = 0; y < grid.y; y++) {// Add the nodes
+                console.log (x + "," + y);
+            }
+        }
+    };
+    obj.createTimeline = function (timelineWrapper) {
+        var playerIcon = document.createElement ("div"),
+            enemyIcon = document.createElement ("div");
+        
         timelineWrapper.innerHTML = "";
         
         playerIcon.setAttribute ("id", "playerIcon");
         playerIcon.classList.add ("charNode");
         timelineWrapper.appendChild (playerIcon);
         
-// Add the nodes
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 5; i++) {// Add the nodes
             var nodeWrapper = document.createElement ("div"),
                 playerNode = document.createElement ("div"),
                 enemyNode = document.createElement ("div");
